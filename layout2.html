@@ -1,101 +1,134 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <title>layout2</title>
-        <meta charset="utf-8" />
+        <meta charset="utf-8"/>
+    <style>
+    body{
+        margin:0px; 
+    }
+    header{
+        background-color: #02918c;
+        color: white; /*글씨 색깔은 상속 됩니다.*/
+        padding: 10px 50px; /* 상하 좌우 */
+    }
+    header>h1>span:nth-child(2){
+        color:#cfc91d;
+    }
+    header li{
+        float: left;
+        list-style: none;
+        padding: 0px 10px; /*안쪽 여백: 상하 좌우*/
+    }
+    .clear{
+        clear:both; height: 0px; overflow:hidden; 
+    }
+    header>h1{
+        float:left;
+        margin: 0px;
+    }
+    header>nav{
+        float:right;
+    }
+    header ul{
+        margin: 10px 0px;
+    }
+    #main_visual{
+        background-image: url("images/layout2_visual.jpg");
+        /* height: 400px; */
+        /* background-size  auto 100%; */ /*가로 세로*/
+        background-size: cover; /* 커버 */
+        background-repeat: no-repeat;
+        /* repeat, no-repeat:남는 곳은 비워둔다, repeat-x:가로로만 채워준다, repeat-y:세로로만 채워준다 */
+        background-color: black;
+        background-position: 50% 50%; /* 0% 최소, 100% 최대 */
+        
+        color: white;
+        text-align: center;
+        padding: 100px 0px; /* 상하 좌우 */
+    }
+    #main_visual>h2{
+        width: 900px;
+        margin: 10px auto; /*상하 좌우*/
+        letter-spacing: 20px; /*글자  사이 간격 */
+        font-size: 40px;
+    }
+    #title_top{
+        font-size: 25px;
+    }
+    #title_bottom{
+        font-size: 15px;
+    }
+    #main_visual>img{
+        margin-top: 130px;
+    }
+    section{
+        text-align: center;
+    }
+    section>h3{
+        color: #02918c;
+        font-weight: normal;
+        font-size: 30px;
+    }
+    section>p{
+        width:  650px;
+        margin: 30px auto;
+    }
+    section>#about_list>li{
+        float: left;
+        width:25%; /* 1/4 4개로 나눔 */
+        width:calc(25% - (1px / 4 * 3) - 50px - 50px);
+        /*넓이를 계산 calc*/
+        /*4칸 3줄*/
+        list-style: none; 
+        border-right: solid 1px #cccccc;
+        padding: 50px;
+    }
+    section>#about_list>li:nth-child(4){
+        border: none; /*마지막 선 삭제*/
+    }
+    section>#about_list{
+        padding: 0px;
+        margin-left: 100px;
+        margin-right: 100px;
 
-        <style>
-            header{
-                background-color: #02918c;
-                color: white; /* 글씨 색깔은 상속됩니다 */
-            }     
-            header>h1>span:nth-child(2){
-                color: #cfc91d;
-            } 
-            header li{
-                float: left;
-                list-style: none;
-                padding: 0px 10px; /* 안쪽 여백 상하 좌우 */
-            }
-            .clear{
-                clear: both; height: 0px; overflow: hidden;
-            }
-            header>h1{
-                float: left;
-                margin: 0px;
-            }
-            header>nav{
-                float: right;
-            }
-            header ul{
-                margin: 10px 0px;
-            }
-            #main_visual{
-                background-image: url("images/layout2_visual.jpg");
-                /* height: 400px; */
-               /* background-size: auto 100%; (가로 세로)*/
-                background-size: cover; /*커버*/
-                background-repeat: no-repeat;
-                /* repeat:반복, no-repeat:반복없음, repeat-x:가로로만 반복, repeat-y:세로로만 반복 */
-                background-color:black;
-                background-position: 50% 50%; /* 배경 그림의 위치, 0% 최소 , 100% 최대 */
-
-                color: white;
-                text-align: center;
-                padding: 100px 0px; /* 상하 죄우 */
-            }
-            #main_visual>h2{
-                width: 900px;
-                margin: 10px auto; /* 상하 좌우 */
-                letter-spacing: 20px; /* 글자 사이 간격 */
-                font-size: 40px;
-            }
-            #title_top{
-                font-size: 25px;
-            }
-            #title_bottom{
-                font-size: 15px;
-            }
-
-            #main_visual>img{
-                margin-top: 200px;
-            }
-            section>h3{
-                color: #02918c;
-                font-weight: normal;
-            }
-            section{
-                text-align: center;
-            }
-            section>p{
-                width: 650px;
-                margin: 0px auto; /* 상하 죄우 */
-            }
-            section>ul>li{
-                float: left;
-                width: 25%; /* 100을 4개로 나눴을 때, 1/4 4개로 나눔 */
-                list-style: none;
-            }
-        </style>
-   </head>
-
-
+    }
+    section dd{
+        margin: 0px;
+    }
+    section>#work_list>li{
+        float: left;
+        list-style: none;
+        width: 25%;
+    }
+    section>#work_list>li>img{
+        display: inline; /*img 태그의 기본모습  - 인라인형 */
+        display: block; /*블록형 모습으로 변경*/
+        width: 100%;
+    }
+    section>#work_list{
+        padding: 0px;
+    }
+    #wrap{
+        min-width: 1000px;
+        max-width: 1920px; /*fullHD*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
+    </head>
     <body>
-            <a href="index.html"> 돌아가기</a>
-
         <div id="wrap">
+        <a href="index.html">뒤로가기</a>
             <header>
                 <h1>
-                   <span>MY</span><span>POLIO</span>  
-                   <!-- div와span은 별의미가 없기때문에 단지 구획을 나눌때 쓰기에 적절 -->
+                    <span>MY</span><span>POLIO</span>
                 </h1>
-                
                 <nav>
                     <ul>
                         <li>Home</li>
                         <li>About me</li>
-                        <li>Servicese</li>
+                        <li>Services</li>
                         <li>My work</li>
                         <li>Contact me</li>
                         <div class="clear"></div>
@@ -103,74 +136,87 @@
                 </nav>
                 <div class="clear"></div>
             </header>
-            <div id="main_visual">
-                <div id="title_top">Lorem ipsum dolor sit iusmod tempor</div>
-                <h2>INCIDIDUNT BORE</h2>
-                <div id="title_bottom">Orem ipsum dolor sit amet, consectetur</div>
-                <img src="images/layout2_button.jpg" />
-            </div>
-            <!-- 띄어쓰기를 하면 오류가 날수도 있으니 언더바를 사용해 이름을 지어줌 -->
-            <section>
-                <h3>ABOUT ME</h3>
-
-                <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                        sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat duis aute irure dolor.
-                </p>
-
-                <ul>
-                    <li>
-                        <img src="images/layout2_icon1.jpg" />
-                        <dl>
-                            <dt>Title goes here</dt>
-                            <dd>
-                                onsectetur adipisicing elit, sedo 
-                                eiusmod tempor incidi et dolorerserss eerhfre mag.
-                            </dd>
-                        </dl>
-                    </li>
-
-                    <li>
-                            <img src="images/layout2_icon2.jpg" />
-                        <dl>
-                            <dt>Title goes here</dt>
-                            <dd>
-                                    onsectetur adipisicing elit, sedo 
-                                    eiusmod tempor incidi et dolorerserss eerhfre mag.
-                            </dd>
-                        </dl>
-                    </li>
-
-                        <li>
-                                <img src="images/layout2_icon3.jpg" />
-                            <dl>
-                                <dt>Title goes here</dt>
-                                <dd>
-                                        onsectetur adipisicing elit, sedo 
-                                        eiusmod tempor incidi et dolorerserss eerhfre mag.
-                                </dd>
-                            </dl>
-                        </li>
-
-                            <li>
-                                    <img src="images/layout2_icon4.jpg" />
-                                <dl>
-                                    <dt>Title goes here</dt>
-                                    <dd>
-                                            onsectetur adipisicing elit, sedo 
-                                            eiusmod tempor incidi et dolorerserss eerhfre mag.
-                                    </dd>
-                                </dl>
-                            </li>
-                            <div class="clear"></div>
-                </ul>
-            </section>
-
-
-            <section>content2</section>
+         <div id="main_visual">
+            <div id="title_top">Lorem ipsum dolor sit iusmod tempor</div>
+            <h2>INCIDIDUNT BORE</h2>
+            <div id="title_bottom">Orem ipsum dolor sit amet, consectetur</div>
+            <img src="images/layout2_button.jpg">
         </div>
+        <section>
+        <h3>ABOUT ME</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+           dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+           commodo consequat duis aute irure dolor.
+        </p>
+        <ul id="about_list">
+            <li>
+                <img src="images/layout2_icon1.jpg" >
+                <dl>
+                    <dt>Title goes here</dt>
+                    <dd>
+                            onsectetur adipisicing elit, 
+                            sedo eiusmod 
+                            tempor incidi et dolorerserss 
+                            eerhfre mag. 
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                    <img src="images/layout2_icon2.jpg" >
+                    <dl>
+                        <dt>Title goes here</dt>
+                        <dd>
+                                onsectetur adipisicing elit, 
+                                sedo eiusmod 
+                                tempor incidi et dolorerserss 
+                                eerhfre mag. 
+                        </dd>
+                    </dl>
+            </li>
+            <li>
+                    <img src="images/layout2_icon3.jpg" >
+                    <dl>
+                        <dt>Title goes here</dt>
+                        <dd>
+                                onsectetur adipisicing elit, 
+                                sedo eiusmod 
+                                tempor incidi et dolorerserss 
+                                eerhfre mag. 
+                        </dd>
+                    </dl>
+            </li>
+            <li>
+                    <img src="images/layout2_icon4.jpg" >
+                    <dl>
+                        <dt>Title goes here</dt>
+                        <dd>
+                                onsectetur adipisicing elit, 
+                                sedo eiusmod 
+                                tempor incidi et dolorerserss 
+                                eerhfre mag. 
+                        </dd>
+                    </dl>
+            </li>
+            <div class="clear"></div>
+        </ul>
+        </section>
+        <section>
+            <h3>MY WORK</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat duis aute irure dolor.
+            </p>
+            <ul id="work_list">
+                <li><img src="images/layout2_pic1.jpg"></li>
+                <li><img src="images/layout2_pic2.jpg"></li>
+                <li><img src="images/layout2_pic3.jpg"></li>
+                <li><img src="images/layout2_pic4.jpg"></li>
+                <li><img src="images/layout2_pic5.jpg"></li>
+                <li><img src="images/layout2_pic6.jpg"></li>
+                <li><img src="images/layout2_pic7.jpg"></li>
+                <li><img src="images/layout2_pic8.jpg"></li>
+                <div class="clear"></div>
+            </ul>
+        </section>
     </body>
 </html>
