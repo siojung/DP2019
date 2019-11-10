@@ -76,7 +76,7 @@
     }
     section>#about_list>li{
         float: left;
-        width:25%; /* 1/4 4개로 나눔 */
+        width:25%; /* 1/4 4개로 나눔 */ /* 100을 4개로 나눴을 때, 1/4 4개로 나눔 */
         width:calc(25% - (1px / 4 * 3) - 50px - 50px);
         /*넓이를 계산 calc*/
         /*4칸 3줄*/
@@ -116,13 +116,18 @@
         margin-right: auto;
     }
     </style>
+
     </head>
+
     <body>
+
         <div id="wrap">
         <a href="index.html">뒤로가기</a>
+
             <header>
                 <h1>
                     <span>MY</span><span>POLIO</span>
+                   <!-- div와span은 별의미가 없기때문에 단지 구획을 나눌때 쓰기에 적절 -->
                 </h1>
                 <nav>
                     <ul>
@@ -136,16 +141,21 @@
                 </nav>
                 <div class="clear"></div>
             </header>
+
+        <!-- 띄어쓰기를 하면 오류가 날수도 있으니 언더바를 사용해 이름을 지어줌 -->
          <div id="main_visual">
             <div id="title_top">Lorem ipsum dolor sit iusmod tempor</div>
             <h2>INCIDIDUNT BORE</h2>
             <div id="title_bottom">Orem ipsum dolor sit amet, consectetur</div>
             <img src="images/layout2_button.jpg">
         </div>
+
         <section>
         <h3>ABOUT ME</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-           dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+             sed do eiusmod tempor incididunt ut labore et
+           dolore magna aliqua. Ut enim ad minim veniam, 
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
            commodo consequat duis aute irure dolor.
         </p>
         <ul id="about_list">
