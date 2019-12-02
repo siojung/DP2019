@@ -1,19 +1,302 @@
 <!DOCTYPE html>
 <html>
-   <head>
-
-        <title>C5inco studio</title>
-        <meta charset="utf-8" />
-        <style>
+    <head>
+        <title>EVERGLOW</title>
+        <meta charset="utf-8"/>
+    <style>
+    body{
+        margin:0px; 
+    }
+    header{
+        background-color:bisque;
+        color: burlywood; 
+        padding: 10px 50px;
+    }
+    .logo{
+                position: static;
+                position: absolute;
+                top: 25px;
+                left: 10px;
+                position: fixed;
+             }
+    header>h1>span:nth-child(2){
+        color:#cfc91d;
+    }
+    header li{
+        float: left;
+        list-style: none;
+        padding: 0px 10px; 
+    }
+    .clear{
+        clear:both; height: 0px; overflow:hidden; 
+    }
+    header>h1{
+        float:left;
+        padding-left: 450px;
+        margin: 0px;
+        font-size: 100px;
+    }
+    header>nav{
+        float:right;
+    }
+    header ul{
+        margin: 10px 0px;
+    }
+    #main_visual{
         
+        background-size: cover; 
+        background-color: burlywood;
         
-        </style>
+        color: white;
+        text-align: center;
+        padding: 100px 0px;
+    }
+    #main_visual>h2{
+        width: 900px;
+        margin: 10px auto;
+        letter-spacing: 20px; 
+        font-size: 40px;
+    }
+    #title_top{
+        font-size: 25px;
+    }
 
-   </head>
+    }
+    #main_visual>img{
+        margin-top: 130px;
+    }
+    section{
+        text-align: center;
+    }
+    section>h3{
+        color: burlywood;
+        font-weight: normal;
+        font-size: 30px;
+    }
+    section>p{
+        width:  650px;
+        margin: 30px auto;
+    }
+    section>#about_list>li{
+        float: left;
+        width:25%; 
+        width:calc(25% - (1px / 4 * 3) - 50px - 50px);
+        list-style: none; 
+        border-right: solid 1px #cccccc;
+        padding: 50px;
+    }
+    section>#about_list>li:nth-child(4){
+        border: none; 
+    }
+    section>#about_list{
+        padding: 0px;
+        margin-left: 100px;
+        margin-right: 100px;
 
-   <body>
-        <a href="index.html"> 돌아가기</a>
+    }
+    section dd{
+        margin: 0px;
+    }
+    section>#work_list>li{
+        float: left;
+        list-style: none;
+        width: 25%;
+    }
+    section>#work_list>li>img{
+        display: inline; 
+        display: block; 
+        width: 100%;
+    }
+    section>#work_list{
+        padding: 0px;
+    }
+    #wrap{
+        min-width: 1000px;
+        max-width: 1920px; 
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-   </body>
+    #SHOP{
+        font-size: 15px;
+        position: absolute;
+        margin: 115px 0px 0px 1310px;
+        color: burlywood;
+    }
+    
+    button{
+        background-color: burlywood;
+            color: white;
+            border: 1px burlywood solid;
+            height: 45px;
+            width: 130px;
+            font-size: 93%;
+            border-radius: 5px;
+            margin-bottom: 50px;
+    }
+
+    input {
+            font-size: 10px;
+            font-style: normal; color: rgba(0, 0, 0, 0.56);
+            width: 200px;
+            height: 30px;
+            border-radius: 50px;
+            border:1px white solid;
+            margin-top: 30px;
+            right: 110px;
+        }
+        #read{
+            color: burlywood;
+        }
+        dt{
+            font-size: 20px;
+            color: burlywood;
+            margin-bottom: 13px;
+        }
+        dd{
+            font-size: 13px;
+            color: rgba(129, 71, 0, 0.925);
+        }
+
+        #footer{
+            margin-top: 50px;
+            font-size: 11px;
+            color:burlywood;
+        }
+
+        #wrap{
+            font-size: 12px;
+            margin-bottom: 30px;
+            margin-left: 880px;
+        }
+    </style>
+
+    </head>
+
+    <body>
+
+       
+
+            <header>
+                    <div id="wrap">
+                            <a href="index.html">index</a>
+                            <a href="training.html"> HTML연습</a>
+                            <a href="html_part1.html"> 자유주제</a>
+                            <a href="html5.html"> html5</a>
+                            <a href="css.html"> css.html</a>
+                            <a href="layout1.html"> layout1.html</a>
+                            <a href="layout2.html"> layout2.html</a>
+                            <a href="layout3.html"> layout3.html</a>
+                            <a href="responsive.html"> responsive.html</a>
+                            </div>
+                <h1>
+                    EVERGLOW
+                </h1>
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Shop</li>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </header>
+
+            <div class="logo">
+                    <a href="#">
+                        <img src="images/as_final/logo.png" />
+                    </a>
+                </div>
+
+         <div id="main_visual">
+            <div id="title_top">We Study Our Time</div>
+            <h2>EVER<br>GLOW</h2>
+            <br>
+            <img src="images/as_final/button.png">
+            <br><br><br>
+            <input type="text" id="search" placeholder="    Search Item">
+        </div>
+
+        <section>
+        <h3>ABOUT US</h3>
+        <button>History</button>
+        <button>Faith</button>
+        <button>Process</button>
+        <button>Photo</button>
+        <ul id="about_list">
+            <li>
+                <img src="images/as_final/7.png" >
+                <dl>
+                    <dt>Body Care</dt>
+                    <dd>
+                            Luxury Brigtening Care
+                             Luxury Regeneration Care
+                             Hot Modeling Care 
+
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                    <img src="images/as_final/7.png" >
+                    <dl>
+                        <dt>Lip care</dt>
+                        <dd>
+                                lip balm and lip treatment at Everglow
+                                 Find an unrivaled selection of lip balms
+                        </dd>
+                    </dl>
+            </li>
+            <li>
+                    <img src="images/as_final/7.png" >
+                    <dl>
+                        <dt>Hair</dt>
+                        <dd>
+                                Shop hair care products at Everglow
+                                Browse an unrivaled selection of shampoos
+                                ,conditioners
+                        </dd>
+                    </dl>
+            </li>
+            <li>
+                    <img src="images/as_final/7.png" >
+                    <dl>
+                        <dt>Aroma</dt>
+                        <dd>
+                                The delicate scent of Everglow Perfume Mist 
+                                is designed for lavish use all over the body.
+                        </dd>
+                    </dl>
+            </li>
+            <div class="clear"></div>
+        </ul>
+        </section>
+        <section>
+            <h3>PRODUCT</h3>
+            <p id="read"> 
+                See our skin care product.
+            </p>
+
+            <div id="SHOP">
+                   <button>SHOP NOW</button>
+               </div>
+               
+            <ul id="work_list">
+                <li><img src="images/as_final/1.png"></li>
+                <li><img src="images/as_final/2.png"></li>
+                <li><img src="images/as_final/1.png"></li>
+                <li><img src="images/as_final/4.png"></li>               
+                <div class="clear"></div>
+            </ul>
+
+            <footer>
+                    <div id="footer">
+                        <p>ⓒ 2019 Everglow. All Right Reserved.</p>
+                        <p>The copyright on all products belongs to Everglow.</p>
+                    </div>
+           </footer>         
+
+        </section>
+    </body>
 </html>
-        
